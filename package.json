@@ -1,0 +1,77 @@
+{
+  "name": "siddy_reliance",
+  "version": "0.1.0",
+  "private": true,
+  "main": "electron.js",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "chart.js": "^4.4.6",
+    "date-fns": "^4.1.0",
+    "papaparse": "^5.4.1",
+    "react": "^18.3.1",
+    "react-chartjs-2": "^5.2.0",
+    "react-datepicker": "^7.5.0",
+    "react-dom": "^18.3.1",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "electron-dev": "set ELECTRON_START_URL=http://localhost:3001 && electron ."
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "homepage": "./",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.example.siddy_app",
+    "productName": "reliance-audit",
+    "extends": null,
+    "files": [
+      "build/**/*",
+      "electron.js"
+    ],
+    "win": {
+      "icon": "public/app-icon.ico",
+      "target": "nsis"
+    },
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "icon": "assets/icon.icns"
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": true,
+      "allowElevation": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": false
+    }
+  }
+}
